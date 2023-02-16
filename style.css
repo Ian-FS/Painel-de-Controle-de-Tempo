@@ -5,24 +5,79 @@ html {
 body {
     max-width: 1440px;
     background-color: hsl(236, 46%, 12%);
-    margin: auto;
-
+    margin: 0;
+    padding: 0;
 }
 
 .painel {
     background-color: white;
     display: grid;
-    margin: auto;
-    max-width: 600px;
-    max-height: 600px;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(4, 1fr);
+    margin: 0 auto;
+    max-width: 900px;
+    max-height: 900px;
+    grid-template-columns: auto auto auto auto;
+    grid-template-rows: auto auto auto auto;
+    grid-template-areas:
+        "usuario img1 img2 img3"
+        "usuario atv1 atv2 atv3"
+        "usuario img4 img5 img6"
+        "periodo atv4 atv5 atv6";
+
 }
 
 .usuario {
-    grid-row: 1/3;
+    grid-area: usuario;
+
 }
 
 .periodo {
-    grid-row: 3/6
+    grid-area: periodo;
+}
+
+.img-trabalho {
+    grid-area: img1;
+}
+
+.img-diversao {
+    grid-area: img2;
+}
+
+.img-estudo {
+    grid-area: img3;
+}
+
+.trabalho {
+    grid-area: atv1;
+}
+
+.diversao {
+    grid-area: atv2;
+}
+
+.estudo {
+    grid-area: atv3;
+}
+
+.img-exercicio {
+    grid-area: img4;
+}
+
+.img-social {
+    grid-area: img5;
+}
+
+.img-autocuidado {
+    grid-area: img6;
+}
+
+.exercicio {
+    grid-area: atv4;
+}
+
+.social {
+    grid-area: atv5;
+}
+
+.autocuidado {
+    grid-area: atv6;
 }
