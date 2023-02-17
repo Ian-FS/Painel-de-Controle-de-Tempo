@@ -9,75 +9,97 @@ body {
     padding: 0;
 }
 
-.painel {
-    background-color: white;
+.container {
     display: grid;
+    background-color: beige;
+    box-sizing: border-box;
+    max-width: 840px;
+    grid-template-columns: repeat(4, minmax(100px, 200px));
+    grid-gap: 5px;
     margin: 0 auto;
-    max-width: 900px;
-    max-height: 900px;
-    grid-template-columns: auto auto auto auto;
-    grid-template-rows: auto auto auto auto;
     grid-template-areas:
-        "usuario img1 img2 img3"
-        "usuario atv1 atv2 atv3"
-        "usuario img4 img5 img6"
-        "periodo atv4 atv5 atv6";
-
+        "user work play study"
+        "periodo exerc social self";
 }
 
-.usuario {
-    grid-area: usuario;
-
+.user {
+    grid-area: user;
+    box-sizing: border-box;
+    max-width: 200px;
+    background-color: hsl(246, 80%, 60%);
+    border-radius: 10px;
 }
 
-.periodo {
-    grid-area: periodo;
+.user>img {
+    max-width: 100px;
+    margin: 20px;
 }
 
-.img-trabalho {
-    grid-area: img1;
+.user>h2 {
+    margin-left: 20px;
 }
 
-.img-diversao {
-    grid-area: img2;
+.user>h1 {
+    margin-left: 20px;
+    margin-top: 1px;
 }
 
-.img-estudo {
-    grid-area: img3;
+.work {
+    grid-area: work;
+    display: grid;
+    grid-template-rows: 60px 160px;
+    background-color: hsl(15, 100%, 70%);
+    border-radius: 10px;
+    grid-gap: 1px;
+    margin: 10px;
 }
 
-.trabalho {
-    grid-area: atv1;
+.work>div {
+    background-color: hsl(246deg 87% 17%);
+    margin: -12px 0 0 0;
+    color: white;
+    padding-left: 20px;
+    border-radius: 10px 10px 10px 10px;
 }
 
-.diversao {
-    grid-area: atv2;
+.work>img {
+    justify-self: end;
 }
 
-.estudo {
-    grid-area: atv3;
+.play {
+    grid-area: play;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
 }
 
-.img-exercicio {
-    grid-area: img4;
+.study {
+    grid-area: study;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
 }
 
-.img-social {
-    grid-area: img5;
-}
-
-.img-autocuidado {
-    grid-area: img6;
-}
-
-.exercicio {
-    grid-area: atv4;
+.exercise {
+    grid-area: exerc;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
 }
 
 .social {
-    grid-area: atv5;
+    grid-area: social;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
 }
 
-.autocuidado {
-    grid-area: atv6;
+.self {
+    grid-area: self;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+}
+
+.periodo {
+    display: inline-grid;
+    grid-template-rows: 30px 30px 30px;
+    font-size: 20px;
+    align-content: center;
+    justify-content: center;
 }
