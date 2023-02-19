@@ -101,7 +101,7 @@ body {
 
 .grid-tracks {
     display: grid;
-    grid-template-columns: 200px 200px 200px;
+    grid-template-columns: repeat(3, minmax(150px, 200px));
     grid-template-rows: 1fr 1fr;
     grid-gap: 20px;
     margin: 10px;
@@ -132,14 +132,14 @@ body {
 }
 
 .type-track {
-    font-size: 18px;
+    font-size: 1.8rem;
     margin: 20px 20px;
     color: white;
     font-weight: 400;
 }
 
 .time-track {
-    font-size: 40px;
+    font-size: 4.0rem;
     margin-left: 20px;
     color: white;
     font-weight: 300;
@@ -147,7 +147,7 @@ body {
 
 .total-time-track {
     margin: 10px 0px 0px 20px;
-    font-size: 10px;
+    font-size: 1.0rem;
     color: var(--Desaturated-blue);
 }
 
@@ -179,4 +179,40 @@ body {
 .self {
     background-color: var(--Soft-orange);
     background-image: url(./images/icon-self-care.svg);
+}
+
+@media (max-width:670px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        max-width: 420px;
+    }
+
+    .user {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .timers {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .grid-tracks {
+        grid-template-columns: repeat(2, minmax(150px, 200px));
+    }
+
+    .track {
+        height: 185px;
+    }
+}
+
+@media (max-width:375px) {
+    .grid-tracks {
+        display: flex;
+        flex-direction: column;
+    }
 }
