@@ -181,13 +181,14 @@ body {
     background-image: url(./images/icon-self-care.svg);
 }
 
-@media (max-width:670px) {
+@media (max-width:870px) {
+
     .container {
         flex-direction: column;
     }
 
     .sidebar {
-        max-width: 420px;
+        max-width: 660px;
     }
 
     .user {
@@ -202,7 +203,7 @@ body {
     }
 
     .grid-tracks {
-        grid-template-columns: repeat(2, minmax(150px, 200px));
+        grid-template-columns: repeat(2, minmax(150px, 320px));
     }
 
     .track {
@@ -214,5 +215,6 @@ body {
     .grid-tracks {
         display: flex;
         flex-direction: column;
+        width: 320px;
     }
 }
